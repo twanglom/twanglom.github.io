@@ -1,18 +1,23 @@
 ---
-layout: page
-title: About
+layout: single
+title: "About Me"
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## About Me
+I am a PhD candidate at École Centrale de Lyon with expertise in:
+- **Control Systems**
+- **Robust Optimization**
+- **Machine Learning**
+- **Acoustic Simulation**
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+### Education
+- **PhD in Mechanical Engineering**, École Centrale de Lyon (2023–Present)
+- **MEng in Mechatronic Engineering**, Suranaree University of Technology
+  - **Thesis**: Linear bearing fault detection using artificial neural networks.
+- **BEng in Mechanical Engineering**, Suranaree University of Technology (First Class Honors)
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+### Research Interests
+- Dynamics and System Modeling
+- Machine Learning in Control Systems
+- Noise Reduction and Acoustic Simulations

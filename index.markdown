@@ -1,6 +1,9 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
+title: "Welcome"
+permalink: /
 ---
+
+Hi, I’m **Tanasak Wanglomklang**, a PhD candidate specializing in robust optimization, control systems, and acoustic simulation. My work bridges advanced algorithms with practical engineering applications.
+
+Explore my [About](about.md), [Projects](projects.md), [Skills](skills.md), and [Contact](contact.md) pages to learn more.
