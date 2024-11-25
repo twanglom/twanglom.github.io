@@ -1,20 +1,14 @@
+# Site settings
 title: "Thanasak Wanglomklang"
-description: "PhD Candidate | Robust Optimization | Acoustic Simulation | Control Systems"
-baseurl: "" # Leave this blank for GitHub Pages
-url: "https://twanglom.github.io"
+email: thanasak.wang@gmail.com
+description: >
+  A short description of your site. # Used in meta tags.
+baseurl: "" # The subpath of your site, e.g., /blog
+url: "http://yourdomain.com" # The base hostname & protocol for your site.
 
-theme: minimal-mistakes-jekyll # Use Minimal Mistakes theme
-
-author:
-  name: "Tanasak Wanglomklang"
-  email: "thanasak.wang@gmail.com"
-  github: "https://github.com/twanglom"
-  linkedin: "https://linkedin.com/in/Thanasak Wanglomklang"
-
-header_pages:
-  - index.md
-  - about.md
-  - projects.md
-  - skills.md
-  - contact.md
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
 
