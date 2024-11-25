@@ -1,14 +1,46 @@
-# Site settings
+# # Site settings
+# title: "Thanasak Wanglomklang"
+# email: thanasak.wang@gmail.com
+# description: >
+#   A short description of your site. # Used in meta tags.
+# baseurl: "" # The subpath of your site, e.g., /blog
+# url: "http://yourdomain.com" # The base hostname & protocol for your site.
+
+# # Build settings
+# markdown: kramdown
+# theme: minimal-mistakes-jekyll
+# plugins:
+#   - jekyll-feed
+
+# header_pages:
+#   - index.md
+#   - about.md
+#   - projects.md
+#   - publications.md
+#   - contact.md
+
+
 title: "Thanasak Wanglomklang"
-email: thanasak.wang@gmail.com
-description: >
-  A short description of your site. # Used in meta tags.
-baseurl: "" # The subpath of your site, e.g., /blog
-url: "http://yourdomain.com" # The base hostname & protocol for your site.
+description: "PhD Candidate | Robust Optimization | Acoustic Simulation | Control Systems"
+baseurl: ""
+url: "https://twanglom.github.io"
 
 # Build settings
 markdown: kramdown
-theme: minimal
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 
+author:
+  name: "Tanasak Wanglomklang"
+  email: "your-email@example.com"
+  github: "https://github.com/<your-username>"
+  linkedin: "https://linkedin.com/in/<your-profile>"
+  scholar: "https://scholar.google.com/citations?user=6pSBbQEAAAAJ" # Replace with your Google Scholar link.
+
+header_pages:
+  - index.md
+  - about.md
+  - projects.md
+  - publications.md
+  - contact.md
