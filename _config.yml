@@ -26,7 +26,7 @@ description: PhD Candidate | Robust Optimization | Acoustic Simulation | Control
 baseurl: ""
 url: https://twanglom.github.io
 markdown: kramdown
-theme: minimal-mistakes-jekyll
+theme: minima
 plugins:
   - jekyll-feed
 
@@ -36,7 +36,7 @@ author:
   github: https://github.com/twanglom
   linkedin: https://linkedin.com/in/Thanasak Wanglomklang
   scholar: https://scholar.google.com/citations?user=6pSBbQEAAAAJ
-  
+
 header_pages:
   - index.md
   - about.md
