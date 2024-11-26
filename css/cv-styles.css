@@ -1,0 +1,75 @@
+/* cv-styles.css */
+
+/* General Reset */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CV Page Body */
+body {
+    font-family: 'Georgia', serif;
+    text-align:justify;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.8;
+    padding: 20px;
+}
+
+/* Main Container for CV */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-top: 30px;
+    color: #2980b9;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+}
+
+/* Paragraph and List Styling */
+p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Awards Section */
+ul li strong {
+    color: #2c3e50;
+    font-weight: bold;
+}
