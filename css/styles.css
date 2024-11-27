@@ -9,22 +9,35 @@ body, h1, h2, p, ul, li, a {
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: #333; 
     line-height: 1.6;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: #333;
+    background-color: #1c1c1c;
     color: white;
-    padding: 12px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 70%; /* Reduced width for centered look */
+    margin: 0 auto; /* Centers the navbar */
+    padding: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative;
+    top: 5; /* Adds some space from the top */
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensures the list takes full width of navbar */
 }
 
 .navbar ul li {
@@ -34,19 +47,26 @@ body {
 .navbar ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    padding: 8px 15px; /* Adds padding for the blue box */
+    border-radius: 5px; /* Rounds the corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .navbar ul li a:hover {
-    text-decoration: underline;
+    background-color: #dbe2e7; /* Blue background on hover */
+    text-decoration: none; /* Removes underline on hover */
 }
+
+
 
 /* Profile Header Styles */
 .profile-header {
     text-align: center;
-    background-color: #2c3e50;
+    background-color: #093c51;
     color: white;
     padding: 50px 20px;
+    margin-bottom: 40px; /* Add spacing before main section */
 }
 
 .profile-container {
@@ -82,31 +102,70 @@ body {
     text-decoration: underline;
 }
 
+
+
 /* Action Buttons */
 .action-buttons {
-    margin-top: 20px;
+    margin-top: 22px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .btn {
-    text-decoration: none;
-    background-color: #2980b9;
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #0091ff 0%, #01baef 100%);
     color: white;
-    padding: 10px 20px;
-    margin: 5px;
+    text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
+    font-weight: 1000; 
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-    background-color: #3498db;
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #333;
+
+
+
+
+.carousel {
+    display: flex;
+    justify-content: center; /* Center the carousel horizontally */
+    align-items: center; /* Center the carousel vertically if needed */
+    width: 100%; /* Ensures the carousel spans full width */
+    margin: 0 auto; /* Centers the carousel block itself */
+}
+
+.carousel-caption {
+    margin: auto; 
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text */
     color: white;
-    padding: 10px 0;
-    margin-top: 20px;
-    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+.carousel-item img {
+    max-width: 100%; /* Make sure the image scales properly */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensures proper alignment within the flex container */
+    margin: auto; /* Center the image horizontally */
+}
+
+section {
+    text-align: center; /* Center-aligns the content of the section */
+    margin: 0 auto; /* Centers the section horizontally */
+    max-width: 1200px; /* Restricts the section's width for better alignment */
+    padding: 20px 0; /* Adds spacing above and below */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
