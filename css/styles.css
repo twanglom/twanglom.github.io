@@ -183,112 +183,125 @@ section {
 
 
 
-/* Existing CSS remains the same */
-
-/* Media Queries for Responsive Design */
+/* Mobile-specific styles */
 @media screen and (max-width: 768px) {
-    /* Navbar Mobile Styles */
+    /* Header and Navigation */
     .navbar {
+        background-color: rgba(0, 0, 0, 0.8);
         width: 100%;
-        height: auto;
-        padding: 10px;
-        position: relative;
+        padding: 15px 0;
+        border-radius: 0;
+        margin-top: 0;
     }
 
     .navbar ul {
-        flex-direction: column;
-        gap: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
 
     .navbar ul li {
-        margin: 5px 0;
-        width: 100%;
-        text-align: center;
+        margin: 0;
     }
 
     .navbar ul li a {
-        display: block;
-        padding: 10px;
-        width: 100%;
+        color: white;
+        font-size: 16px;
+        padding: 8px 15px;
     }
 
-    /* Profile Header Mobile Styles */
+    /* Profile Section */
     .profile-header {
-        padding: 30px 15px;
-    }
-
-    .profile-container {
-        margin-top: 10px;
+        background-color: #093c51;
+        padding: 20px 15px 40px;
+        margin-bottom: 0;
     }
 
     .profile-pic {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
+        border: 3px solid white;
+        border-radius: 50%;
+        margin: 20px auto;
     }
 
     .profile-header h1 {
         font-size: 24px;
+        margin: 15px 0;
     }
 
     .profile-header p {
         font-size: 14px;
-        padding: 0 10px;
+        line-height: 1.4;
+        margin: 0 auto;
+        max-width: 90%;
+        padding: 0 15px;
     }
 
-    /* Action Buttons Mobile Styles */
+    /* Social Links */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 20px 0;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Action Buttons */
     .action-buttons {
-        flex-direction: column;
-        gap: 10px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
         padding: 0 20px;
     }
 
     .btn {
-        width: 100%;
-        max-width: 250px;
-        margin: 0 auto;
-    }
-
-    /* Carousel Mobile Styles */
-    .carousel {
-        margin: 0 10px;
-    }
-
-    .carousel-caption {
-        max-width: 95%;
-        padding: 5px;
-    }
-
-    .carousel-caption h5 {
+        padding: 12px 25px;
         font-size: 16px;
+        border-radius: 8px;
+        background: #0091ff;
+        min-width: 140px;
     }
 
-    .carousel-caption p {
-        font-size: 14px;
+    /* Software Development Section */
+    section h2 {
+        font-size: 24px;
+        margin: 30px 0 20px;
     }
 
-    section {
-        padding: 15px;
+    .carousel {
+        margin: 0;
+        width: 100%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        object-fit: cover;
     }
 }
 
-/* Additional breakpoint for very small devices */
-@media screen and (max-width: 480px) {
-    .profile-header h1 {
-        font-size: 20px;
-    }
-
-    .profile-header p {
-        font-size: 13px;
-    }
-
-    .social-icons {
-        display: flex;
-        flex-direction: column;
+/* Additional styles for extra small devices */
+@media screen and (max-width: 380px) {
+    .navbar ul {
         gap: 10px;
-        align-items: center;
     }
 
     .navbar ul li a {
-        font-size: 16px;
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%;
     }
 }
