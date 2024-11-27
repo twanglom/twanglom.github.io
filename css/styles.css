@@ -169,3 +169,126 @@ section {
     padding: 20px 0; /* Adds spacing above and below */
     box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Existing CSS remains the same */
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    /* Navbar Mobile Styles */
+    .navbar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        position: relative;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Profile Header Mobile Styles */
+    .profile-header {
+        padding: 30px 15px;
+    }
+
+    .profile-container {
+        margin-top: 10px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-header h1 {
+        font-size: 24px;
+    }
+
+    .profile-header p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* Action Buttons Mobile Styles */
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    /* Carousel Mobile Styles */
+    .carousel {
+        margin: 0 10px;
+    }
+
+    .carousel-caption {
+        max-width: 95%;
+        padding: 5px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 16px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* Additional breakpoint for very small devices */
+@media screen and (max-width: 480px) {
+    .profile-header h1 {
+        font-size: 20px;
+    }
+
+    .profile-header p {
+        font-size: 13px;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+}
