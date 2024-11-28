@@ -21,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 60px;
-    width: 70%; /* Reduced width for centered look */
+    width: 100%; /* Reduced width for centered look */
     margin: 0 auto; /* Centers the navbar */
     padding: 0;
     border-radius: 5px;
@@ -116,12 +116,12 @@ body {
 .btn {
     display: inline-block;
     padding: 12px 25px;
-    background: linear-gradient(135deg, #0091ff 0%, #01baef 100%);
+    background: linear-gradient(135deg, #61e1f1 0%, #01baef 100%);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 1000; 
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 100; 
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
@@ -131,7 +131,7 @@ body {
 .btn:hover {
     opacity: 0.9;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -178,130 +178,47 @@ section {
 
 
 
-
-
-
-
-
-/* Mobile-specific styles */
-@media screen and (max-width: 768px) {
-    /* Header and Navigation */
-    .navbar {
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 100%;
-        padding: 15px 0;
-        border-radius: 0;
-        margin-top: 0;
-    }
-
-    .navbar ul {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .navbar ul li {
-        margin: 0;
-    }
-
-    .navbar ul li a {
-        color: white;
-        font-size: 16px;
-        padding: 8px 15px;
-    }
-
-    /* Profile Section */
-    .profile-header {
-        background-color: #093c51;
-        padding: 20px 15px 40px;
-        margin-bottom: 0;
-    }
-
-    .profile-pic {
-        width: 150px;
-        height: 150px;
-        border: 3px solid white;
-        border-radius: 50%;
-        margin: 20px auto;
-    }
-
-    .profile-header h1 {
-        font-size: 24px;
-        margin: 15px 0;
-    }
-
-    .profile-header p {
-        font-size: 14px;
-        line-height: 1.4;
-        margin: 0 auto;
-        max-width: 90%;
-        padding: 0 15px;
-    }
-
-    /* Social Links */
-    .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin: 20px 0;
-    }
-
-    .social-icons a {
-        font-size: 18px;
-        color: white;
-        text-decoration: none;
-    }
-
-    /* Action Buttons */
-    .action-buttons {
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-        padding: 0 20px;
-    }
-
-    .btn {
-        padding: 12px 25px;
-        font-size: 16px;
-        border-radius: 8px;
-        background: #0091ff;
-        min-width: 140px;
-    }
-
-    /* Software Development Section */
-    section h2 {
-        font-size: 24px;
-        margin: 30px 0 20px;
-    }
-
-    .carousel {
-        margin: 0;
-        width: 100%;
-    }
-
-    .carousel-item img {
-        width: 100%;
-        object-fit: cover;
-    }
+/* Social Icons Container */
+.social-icons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
 }
 
-/* Additional styles for extra small devices */
-@media screen and (max-width: 380px) {
-    .navbar ul {
-        gap: 10px;
-    }
+/* Individual Social Links */
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-    .navbar ul li a {
-        font-size: 14px;
-        padding: 6px 10px;
-    }
+/* Icon Styling */
+.social-icons a i {
+    font-size: 18px;
+}
 
-    .action-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Hover Effects */
+.social-icons a:hover {
+    background-color: rgba(243, 236, 236, 0.2);
+    transform: translateY(-2px);
+}
 
-    .btn {
-        width: 80%;
-    }
+/* Specific colors for each platform on hover */
+.social-icons a:hover i.fa-github {
+    color: #f0f6fc;
+}
+
+.social-icons a:hover i.fa-envelope {
+    color: #EA4335;
+}
+
+.social-icons a:hover i.fa-linkedin {
+    color: #0077b5;
 }
