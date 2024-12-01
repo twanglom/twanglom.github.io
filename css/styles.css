@@ -148,12 +148,14 @@ body {
 
 .carousel-caption {
     margin: auto; 
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for text */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for text */
     color: white;
     padding: 10px;
     border-radius: 5px;
     max-width: 80%;
 }
+
+
 
 .carousel-item img {
     max-width: 100%; /* Make sure the image scales properly */
@@ -169,6 +171,7 @@ section {
     padding: 20px 0; /* Adds spacing above and below */
     box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
+
 
 
 
