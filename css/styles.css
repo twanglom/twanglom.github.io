@@ -148,7 +148,7 @@ body {
 
 .carousel-caption {
     margin: auto; 
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for text */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
     color: white;
     padding: 10px;
     border-radius: 5px;
