@@ -1,7 +1,284 @@
-<main>
-    <h1>Projects</h1>
-    <ul>
-        <li><strong>Single Plane Balancing V1.1</strong>: Software for vibration analysis.</li>
-        <li><strong>Acoustic Simulation Tools</strong>: Tools for aircraft cabin noise prediction.</li>
-    </ul>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Thanasak Wanglomklang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            background: #f5f5f5;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 10px;
+            background: #fff;
+        }
+
+        .project-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            margin-bottom: 15px;
+            color: #666;
+            flex-grow: 1;
+        }
+
+        .project-tech {
+            margin: 15px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background: #e0e0e0;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            color: #333;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            background-color: #2ecc71;
+        }
+
+        .btn:hover {
+            background-color: #27ae60;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Software Projects</h1>
+        <p>A collection of software tools and applications I've developed for engineering analysis, simulation, and control systems.</p>
+    </div>
+
+    <div class="project-grid">
+        <!-- PyEGRO Project -->
+        <div class="project-card">
+            <img src="images/pyegro-demo.jpg" alt="PyEGRO Interface" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">PyEGRO Library</h2>
+                <p class="project-description">
+                    An open-source Python library for Efficient Global Robust Optimization. 
+                    Features include uncertainty quantification, adaptive sampling strategies, 
+                    and robust optimization algorithms.
+                </p>
+                <div class="project-tech">
+                    <strong>Technologies:</strong> Python, NumPy, SciPy, GPyTorch
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Optimization</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Scientific Computing</span>
+                </div>
+                <a href="https://github.com/twanglom/pyegro" class="btn">
+                    <i class="fab fa-github"></i> GitHub Repository
+                </a>
+            </div>
+        </div>
+
+        <!-- MES-Acoustic Project -->
+        <div class="project-card">
+            <img src="software_images/MES-Software.png" alt="MES-Acoustic Interface" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">MES-Acoustic Version 1.0</h2>
+                <p class="project-description">
+                    A comprehensive software tool for predicting and optimizing noise in vibroacoustic 
+                    environments. Features intuitive GUI for parameter setup, visualization, and analysis.
+                </p>
+                <div class="project-tech">
+                    <strong>Technologies:</strong> Python, PySide6, NumPy, Matplotlib
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Acoustics</span>
+                    <span class="tag">Simulation</span>
+                    <span class="tag">GUI</span>
+                </div>
+                <a href="https://github.com/twanglom/mes-acoustic" class="btn">
+                    <i class="fab fa-github"></i> GitHub Repository
+                </a>
+            </div>
+        </div>
+
+        <!-- FFT Analysis Software -->
+        <div class="project-card">
+            <img src="images/fft-analysis-demo.jpg" alt="FFT Analysis Interface" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">FFT Analysis Software</h2>
+                <p class="project-description">
+                    Advanced signal processing tool for vibration analysis. Provides real-time 
+                    FFT analysis, sensor interfacing, and comprehensive data visualization.
+                </p>
+                <div class="project-tech">
+                    <strong>Technologies:</strong> Python, NumPy, SciPy, Tkinter
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Signal Processing</span>
+                    <span class="tag">Vibration Analysis</span>
+                    <span class="tag">Data Acquisition</span>
+                </div>
+                <a href="downloads/fft-analysis.zip" class="btn">
+                    <i class="fas fa-download"></i> Download Software
+                </a>
+            </div>
+        </div>
+
+        <!-- Balancing System Software -->
+        <div class="project-card">
+            <img src="images/balancing-system-demo.jpg" alt="Balancing System Interface" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">Balancing System Software V1.2</h2>
+                <p class="project-description">
+                    Professional tool for single-plane rotor balancing. Includes real-time 
+                    monitoring, automated calculations, and comprehensive reporting features.
+                </p>
+                <div class="project-tech">
+                    <strong>Technologies:</strong> Python, Qt, NumPy, Matplotlib
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Mechanical</span>
+                    <span class="tag">Vibration</span>
+                    <span class="tag">Industrial</span>
+                </div>
+                <a href="downloads/balancing-system.zip" class="btn">
+                    <i class="fas fa-download"></i> Download Software
+                </a>
+            </div>
+        </div>
+
+        <!-- Process Control Software -->
+        <div class="project-card">
+            <img src="images/process-control-demo.jpg" alt="Process Control Interface" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">Process Control Software</h2>
+                <p class="project-description">
+                    GUI-based application for temperature and motor speed control. Features 
+                    PID tuning interface, real-time monitoring, and control parameter optimization.
+                </p>
+                <div class="project-tech">
+                    <strong>Technologies:</strong> Python, PySide6, Control Systems
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Control Systems</span>
+                    <span class="tag">PID Control</span>
+                    <span class="tag">Real-time</span>
+                </div>
+                <a href="downloads/process-control.zip" class="btn">
+                    <i class="fas fa-download"></i> Download Software
+                </a>
+            </div>
+        </div>
+
+        <!-- Measurement and Calibration Software -->
+        <div class="project-card">
+            <img src="images/calibration-demo.jpg" alt="Calibration Software Interface" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">Measurement & Calibration Software</h2>
+                <p class="project-description">
+                    Comprehensive solution for analog sensor calibration. Supports various 
+                    sensor types including pressure and temperature sensors with automated 
+                    calibration procedures.
+                </p>
+                <div class="project-tech">
+                    <strong>Technologies:</strong> Python, Qt, Data Acquisition
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Instrumentation</span>
+                    <span class="tag">Calibration</span>
+                    <span class="tag">Measurement</span>
+                </div>
+                <a href="downloads/calibration-software.zip" class="btn">
+                    <i class="fas fa-download"></i> Download Software
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
