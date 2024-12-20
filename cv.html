@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Thanasak Wanglomklang</title>
-    <link rel="stylesheet" href="css/cv-styles.css">
     <style>
-        /* Additional Personal Info Box Style */
-        header {
-            background: #ecf0f1;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
             padding: 20px;
+            background: #f5f5f5;
+            text-align: justify;
+        }
+        header {
+            background: #fff;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
@@ -17,10 +30,56 @@
         }
         header h1 {
             margin-bottom: 10px;
+            color: #2c3e50;
         }
         header p {
             margin-bottom: 5px;
             font-size: 1.1em;
+            color: #34495e;
+        }
+        main {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-position: inside;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        li ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .publications li, .conferences li {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .author-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .publication-title {
+            font-style: italic;
         }
     </style>
 </head>
@@ -35,60 +94,24 @@
     <main>
         <section>
             <h2>Professional Summary</h2>
-            <p>
-                PhD candidate in Mechanical Engineering at École Centrale de Lyon with expertise in optimization under uncertainty, 
-                machine learning, and high-frequency vibroacoustic simulation. I specialize in developing computational methods for 
-                noise reduction, uncertainty quantification, and shape optimization for engineering applications such as aircraft 
-                cabin design. My work integrates advanced Gaussian Process Regression (GPR) with efficient adaptive sampling strategies 
-                and Artificial Neural Networks (ANN) techniques for robust design optimization. Experienced in control systems, 
-                vibration analysis, and scientific software development. Passionate about applying AI-driven solutions to engineering 
-                challenges.
-            </p>
+            <p>PhD candidate in Mechanical Engineering at École Centrale de Lyon with expertise in optimization under uncertainty, machine learning, and high-frequency vibroacoustic simulation. Specialized in developing innovative methods for noise reduction, uncertainty quantification, and shape optimization for applications such as aircraft cabin design. Strong background in control systems, encompassing dynamics and system modeling, designing and deploying embedded control systems. Created multiple software solutions including PyEGRO for Robust Design Optimization, an open-source Python library for efficient global optimization under uncertainty. Experienced in teaching, industrial training, and software development, with a focus on integrating AI-driven solutions into engineering research.</p>
         </section>
 
         <section>
             <h2>Education</h2>
             <ul>
                 <li>
-                    <strong>PhD candidate in Mechanical Engineering</strong><br>
-                    École Centrale de Lyon, France (2023 – Present)<br>
-                    <em>Research Focus:</em> Robust optimization and vibroacoustic simulations using GPR and ANN for uncertainty quantification and shape optimization.<br>
-                    <em>Applications:</em> Noise reduction in aircraft cabins with enchance computational costs through adaptive sampling strategies and multi-objective design optimization.
+                    <strong>PhD in Mechanical Engineering</strong> - École Centrale de Lyon, France (2023 – Present)<br>
+                    <em>Research Topic:</em> Robust Shape Optimization Under Vibro-Acoustic Criteria Using Gaussian Process Approaches<br>
+                    <em>Focus:</em> Shape optimization under uncertainty, uncertainty quantification, GPR with adaptive sampling strategies and multi-objective design with ANN models. Application in aircraft cabin design for noise reduction in high-frequency.
                 </li>
                 <li>
-                    <strong>Master’s in Mechatronic Engineering</strong><br>
-                    Suranaree University of Technology, Thailand (2017 – 2019)<br>
-                    Thesis: Linear bearing fault detection using Artificial Neural Networks (ANN) with a PI servo system for high-speed automation machines.<br>
+                    <strong>Master's in Mechatronic Engineering</strong> - Suranaree University of Technology, Thailand (03/2017 – 10/2019)<br>
+                    <em>Research Topic:</em> Linear bearing fault detection using an artificial neural network based on a PI servo system with the observer for high-speed automation machines.
                 </li>
                 <li>
-                    <strong>Bachelor’s in Mechanical Engineering (First Class Honors)</strong><br>
-                    Suranaree University of Technology, Thailand (2014 – 2017)<br>
-                    GPA: 3.94/4.00<br>
-                    Achievements: First Class Honors with a focus on mechanical systems and control engineering.
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Professional Experience</h2>
-            <ul>
-                <li>
-                    <strong>Lecturer</strong><br>
-                    Mechanical Engineering Department, Suranaree University of Technology, Thailand (2020 – 2023)<br>
-                    - Conducted research on dynamics and system modeling, control systems, and structural vibration analysis.<br>
-                    - Designed and implemented industry-relevant training programs, including:
-                    <ul>
-                        <li>Measurement Methods and Interface Design</li>
-                        <li>Embedded Control Systems for Real-Time Applications</li>
-                        <li>Neural Network Applications in Control Systems</li>
-                        <li>Programming of 3-Axis CNC machining center</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Internship</strong><br>
-                    Western Digital Storage Technologies (Thailand) Ltd. (2019)<br>
-                    - Designed control systems using frequency response methods for 3-axis linear motion.<br>
-                    - Conducted vibration measurement and analysis for machine fault detection.
+                    <strong>Bachelor's in Mechanical Engineering</strong> - Suranaree University of Technology, Thailand (07/2014 – 03/2017)<br>
+                    First Class Honors, GPAX: 3.94/4.00
                 </li>
             </ul>
         </section>
@@ -96,53 +119,108 @@
         <section>
             <h2>Technical Skills</h2>
             <ul>
-                <li><strong>Programming Languages:</strong> Python, MATLAB, Simulink, C/C++</li>
-                <li><strong>Python Libraries and Frameworks:</strong>
+                <li><strong>Programming Languages:</strong> Python, MATLAB, C/C++</li>
+                <li><strong>Python Frameworks:</strong>
                     <ul>
-                        <li>Scientific Computing: Numpy, Pandas, SciPy, Matplotlib</li>
-                        <li>Machine Learning: PyTorch, GPyTorch, scikit-learn, Optuna (model hyperparameter tuning)</li>
-                        <li>Optimization: Pymoo (single and multi-objective), SALib (sensitivity analysis)</li>
-                        <li>Geometric Computing and vistualization: PyVista, PyGeM</li>
+                        <li>Scientific and GUI: NumPy, Pandas, Matplotlib, SciPy, joblib, PySide6, Tkinter</li>
+                        <li>Machine Learning: PyTorch, GPyTorch, scikit-learn, Optuna</li>
+                        <li>Optimization: Pymoo (single & multi objective), SALib (sensitivity analysis)</li>
+                        <li>Geometric computing: PyVista (Mesh computation), PyGeM (Free Form Deformation)</li>
                     </ul>
                 </li>
-                <li><strong>Modeling & Simulation Tools:</strong> SolidWorks, AutoCAD, Comsol, Gmsh</li>
-                <li><strong>Hardware Expertise:</strong> Raspberry Pi, Arduino, STM32, Labjack, vibration sensors, data acquisition devices.</li>
+                <li><strong>Modeling & Simulation:</strong> Solidwork, AutoCAD, MATLAB, Gmsh, Comsol</li>
+                <li><strong>Techniques:</strong> Robust Optimization, Bayesian Optimization, Gaussian Process Regression, Artificial Neural Network, Uncertainty Quantification, Control Theory, Modal Analysis</li>
+                <li><strong>Hardware:</strong> Embedded hardware, Analog and Digital sensor devices</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+            <ul>
+                <li>
+                    <strong>Lecturer</strong> - Suranaree University of Technology, Thailand (2020 – 2023)
+                    <ul>
+                        <li>Conducted research on dynamics and system modeling, control system design, structural vibration and AI applications in engineering</li>
+                        <li>Provided educational and industrial training in:
+                            <ul>
+                                <li>Measurement Methods, Interface, and Display</li>
+                                <li>Embedded Control Systems</li>
+                                <li>Programming and Control of CNC 3-Axis Machining Center</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Master Intern</strong> - Western Digital Storage Technologies (Thailand) Ltd.
+                    <ul>
+                        <li>Control systems design using frequency response and model-based tuning for 3-Axis linear motion</li>
+                        <li>Conducted vibration measurement and analysis for machine fault detection</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
         <section>
             <h2>Key Projects</h2>
             <ul>
-                <li><strong>PyEGRO</strong><br>
-                    Developed an open-source Python library for Efficient Global Robust Optimization.
+                <li>
+                    <strong>PyEGRO:</strong> Created an open-source Python library for optimization under uncertainty. Integrating adaptive infill for efficient experiment sampling. Supported GPR and ANN model for accelerating in optimization loop.
                 </li>
-                <li><strong>MES-Acoustic Simulation Tool</strong><br>
-                    Created a GUI for noise simulation using the Simplifly Engergy Method method with user-friendly visualization.
+                <li>
+                    <strong>MES-Acoustic Version 1.0:</strong> Designed software for predicting and optimizing noise in vibro-acoustic environments with user-friendly visualization and parameter setup.
                 </li>
-                <li><strong>FFT Analysis Software</strong><br>
-                    Designed a program to interface with vibration sensors for signal processing and FFT analysis.
+                <li>
+                    <strong>FFT Analysis Software:</strong> Designed program for vibration sensor interfacing and signal processing. Applied in educational training sessions.
                 </li>
-                <li><strong>Balancing System Software (V1.2)</strong><br>
-                    Developed a tool for single-plane rotor balancing used in industrial training programs.
+                <li>
+                    <strong>Balancing System Software (V1.2):</strong> Developed tool for single-plane rotor balancing used in industrial training programs.
                 </li>
-                <li><strong>Process Control Software</strong><br>
-                    Implemented a GUI-based application for temperature and motor speed control.<br>
-                    Demonstrated real-world applications of PID tuning and feedback control.
-                </li>
-                <li><strong>Measurement and Calibration Software</strong><br>
-                    Developed a software solution for analog sensor calibration (e.g., pressure, temperature).
+                <li>
+                    <strong>Process Control Software:</strong> Implemented GUI-based application for temperature and motor speed control demonstrating PID tuning.
+                <li>
+                    <strong>Measurement and Calibration Software:</strong> Developed software solution for analog sensor calibration  (e.g., pressure, temperature).
                 </li>
             </ul>
         </section>
 
-        <section>
-            <h2>Awards & Recognitions</h2>
+        <section class="publications">
+            <h2>Publications</h2>
             <ul>
-                <li>Franco-Thai Scholarship (2023) – For pursuing PhD studies in France.</li>
-                <li>Best Presentation Award (2019) – MERE International Conference, China.</li>
-                <li>Master’s Scholarship – Funded by Western Digital Storage Technologies for high-impact research.</li>
+                <li><span class="author-name">Wanglomklang, T.</span>, Chommuangpuck, P., & Srisertpol, J. (2021). Energy Consumption and Vibration of Auto Core Adhesive Mounter Machine in Case of Linear Bearing Failures. <span class="publication-title">RMUTSB Academic Journal</span>, 7(2), 234-246.</li>
+                <li><span class="author-name">Wanglomklang, T.</span>, Chommaungpuck, P., & Srisertpol, J. (2020). Linear Bearing Fault Detection Using an Artificial Neural Network Based on a PI Servo System with the Observer for High-speed Automation Machine. <span class="publication-title">IOP Conference Series: Materials Science and Engineering</span>, 717(1), 012011.</li>
+                <li>Thongtan, W., Odngam, S., <span class="author-name">Wanglomklang, T.</span>, & Srisertpol, J. (2020). The Effect of Shaft Whirling on Accuracy of Rotating Coil Magnetic Measurement System. <span class="publication-title">IOP Conference Series: Materials Science and Engineering</span>, 717(1), 012012.</li>
+                <li>Chommuangpuck, P., <span class="author-name">Wanglomklang, T.</span>, Tantrairatn, S., & Srisertpol, J. (2020). Fault tolerant control based on an observer on PI servo design for a high-speed automation machine. <span class="publication-title">Machines</span>, 8(2), 22.</li>
+                <li>Chommuangpuck, P., <span class="author-name">Wanglomklang, T.</span>, & Srisertpol, J. (2021). Fault detection and diagnosis of linear bearing in auto core adhesion mounting machines based on condition monitoring. <span class="publication-title">Systems Science & Control Engineering</span>, 9(1), 290-303.</li>
+                <li><span class="author-name">Wanglomklang, T.</span>, Chommaungpuck, P., Chamniprasart, K., & Srisertpol, J. (2022). Using fault detection and classification techniques for machine breakdown reduction of the HGA process caused by the slider loss defect. <span class="publication-title">Manufacturing Review</span>, 9, 21.</li>
+                <li><span class="author-name">Wanglomklang, T.</span>, Tuntavesesak, T., Tumthong, W., & Srisertpol, J. (2022). Roller Bearing Faults Classification Using Artificial Neural Network Based on Servo System with Observer Design. <span class="publication-title">WSEAS Transactions on Systems</span>, 21, 241-246.</li>
+                <li>Khaengkarn, S., Nonkeaw, K., Wonglomklang, T., & Srisertpol, J. (2022). Real-Time Tracking and Environmental Monitoring System for Ice Trucks using IoT Techniques. <span class="publication-title">WSEAS Transactions on Information Science and Applications</span>, 19, 297-302.</li>
+                <li>Seangsri, S., <span class="author-name">Wanglomklang, T.</span>, Khaewnak, N., Yachum, N., & Srisertpol, J. (2023). Optimizing Ultra-High Vacuum Control in Electron Storage Rings Using Fuzzy Control and Estimation of Pumping Speed by Neural Networks with Molflow+. <span class="publication-title">Systems</span>, 11(3), 116.</li>
+            </ul>
+        </section>
+
+        <section class="conferences">
+            <h2>Conferences</h2>
+            <ul>
+                <li><span class="author-name">Wanglomklang, T.</span>, Chommaungpuck, P., and Srisertpol, J. (2019). Energy loss analysis of linear bearing failures in automatic slider attaching process. <span class="publication-title">Proceeding of 15th Conference on Energy Network of Thailand (E-NETT)</span>, May 22–24, 2019.</li>
+                <li><span class="author-name">Wanglomklang, T.</span>, Chommaungpuck, P., and Srisertpol, J. (2019). Linear bearing fault detection using an artificial neural network based on a PI servo system with the observer for high-speed automation machine. <span class="publication-title">Proceeding of 2019 International Conference on Mechanical, Electronic and Robotics Engineering</span>, Wuhan, China, November 9-11, 2019.</li>
+                <li>Thongtan, W., Odngam, S., <span class="author-name">Wanglomklang, T.</span>, and Srisertpol, J. (2019). The effect of shaft whirling on accuracy of rotating coil magnetic measurement system. <span class="publication-title">Proceeding of 2019 International Conference on Mechanical, Electronic and Robotics Engineering</span>, Wuhan, China, November 9-11, 2019.</li>
+                <li>Thamcharoen, T., Srisertpol, J., <span class="author-name">Wanglomklang, T.</span>, Chommaungpuck, P., and Deeying, J. (2020). Fault detection and diagnosis via machine learning for preventing slider loss defect. <span class="publication-title">Proceeding of Conference of Mechanical Engineering Network of Thailand (ME-NETT)</span>, Thailand, July 15–17, 2020.</li>
+                <li>Nimthanee, P., Sri-on, T., <span class="author-name">Wanglomklang, T.</span>, and Srisertpol, J. (2021). A wireless monitoring system for cannabis drying chamber. <span class="publication-title">Proceeding of the 44th Electrical Engineering Conference (EECON44)</span>, Thailand, November 17–19, 2021.</li>
+                <li><span class="author-name">Wanglomklang, T.</span>, Tuntavesesak, T., Tumthong, W., and Srisertpol, J. (2022). Artificial neural network-based fault classification of roller bearing using time responses with observer-based speed control. <span class="publication-title">6th European Conference on Electrical Engineering & Computer Science (ELECS 2022)</span>, Bern, Switzerland, December 21-23, 2022.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Awards</h2>
+            <ul>
+                <li><strong>Franco-Thai Scholarship</strong> for PhD studies in France (2023)</li>
+                <li><strong>Master's Scholarship:</strong> Research funded by Western Digital Storage Technologies (Thailand) Ltd.</li>
             </ul>
         </section>
     </main>
+
+    <footer style="text-align: center; padding: 20px; color: #666; margin-top: 30px;">
+        <p>Last Updated: December 2024</p>
+    </footer>
 </body>
 </html>
