@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Thanasak Wanglomklang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ===== Design Tokens (Light) ===== */
+    :root{
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #0f172a;
+      --text-muted:#495266;
+      --accent: #3b82f6;
+      --chip:#e5e7eb;
+      --ring: rgba(59,130,246,.25);
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --card-border: #e5e7eb;
+      --btn:#10b981;
+      --btn-hover:#0ea371;
+    }
+    /* ===== Dark Scheme ===== */
+    [data-theme="dark"]{
+      --bg: #0b1220;
+      --card: #121a2b;
+      --text: #e5efff;
+      --text-muted:#9fb0c6;
+      --accent:#60a5fa;
+      --chip:#1f2a44;
+      --ring: rgba(96,165,250,.35);
+      --shadow: 0 10px 30px rgba(1,4,12,.6);
+      --card-border: #1e293b;
+      --btn:#22c55e;
+      --btn-hover:#16a34a;
+    }
+    /* Respect system preference if user hasn't chosen */
+    @media (prefers-color-scheme: dark){
+      :root[data-theme="system"]{ color-scheme: dark; }
+      :root[data-theme="system"]{ --bg:#0b1220; --card:#121a2b; --text:#e5efff; --text-muted:#9fb0c6; --accent:#60a5fa; --chip:#1f2a44; --ring: rgba(96,165,250,.35); --shadow: 0 10px 30px rgba(1,4,12,.6); --card-border:#1e293b; --btn:#22c55e; --btn-hover:#16a34a;}
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(59,130,246,.08), transparent 60%),
+                  radial-gradient(900px 500px at 110% 10%, rgba(34,197,94,.10), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .container{max-width:1200px;margin:0 auto;padding:24px}
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:16px; padding:28px 0 10px;
+    }
+    .title{font-size: clamp(24px, 3vw, 36px); font-weight: 800; letter-spacing:-0.02em}
+    .subtitle{color:var(--text-muted); max-width:760px; margin-top:6px}
+    .controls{display:flex; gap:10px; align-items:center}
+    .toggle, .mode-chip{
+      border:1px solid var(--card-border);
+      background: var(--card);
+      color: var(--text);
+      padding:10px 14px; border-radius: 12px;
+      box-shadow: var(--shadow);
+      cursor:pointer; font-weight:600;
+    }
+    .mode-chip{pointer-events:none; opacity:.9}
+    .grid{
+      display:grid; gap:28px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      padding:26px 0 40px;
+    }
+    .card{
+      background: var(--card);
+      border:1px solid var(--card-border);
+      border-radius: 18px;
+      overflow: clip;
+      box-shadow: var(--shadow);
+      display:flex; flex-direction:column;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover{ transform: translateY(-3px); box-shadow: 0 16px 40px rgba(2,6,23,.15); }
+    .thumb{
+      aspect-ratio: 16/9; width:100%;
+      background: linear-gradient(180deg, rgba(59,130,246,.15), transparent),
+                  linear-gradient(0deg, rgba(34,197,94,.1), transparent);
+      display:flex; align-items:center; justify-content:center;
+      color: var(--text-muted); font-weight:700; letter-spacing:.08em; font-size:12px;
+    }
+    .thumb img{ width:100%; height:100%; object-fit:cover; display:block }
+    .content{ padding:18px 18px 16px; display:flex; flex-direction:column; gap:12px; flex:1 }
+    .project-title{ font-size: 20px; font-weight: 700; letter-spacing:-.01em }
+    .desc{ color: var(--text-muted) }
+    .tech{ font-size: 13px; color: var(--text-muted) }
+    .tags{ display:flex; flex-wrap:wrap; gap:8px }
+    .tag{ font-size:12px; background: var(--chip); color: var(--text); padding:6px 10px; border-radius:999px }
+    .actions{ display:flex; gap:10px; margin-top:auto; }
+    .btn{ display:inline-flex; gap:8px; align-items:center; padding:10px 14px; border-radius:12px;
+          background: var(--btn); color:#fff; text-decoration:none; font-weight:700 }
+    .btn.secondary{ background: var(--accent) }
+    .btn:hover{ background: var(--btn-hover) }
+    footer{ color:var(--text-muted); padding:20px 0 40px; text-align:center; font-size:14px }
+  </style>
+  <script>
+    // Theme persistence
+    (function(){
+      const saved = localStorage.getItem("theme-choice"); // 'dark' | 'light' | 'system' | null
+      if(saved){ document.documentElement.setAttribute("data-theme", saved); }
+    })();
+    function setTheme(mode){
+      document.documentElement.setAttribute("data-theme", mode);
+      localStorage.setItem("theme-choice", mode);
+      const label = document.getElementById("mode-label");
+      label.textContent = mode.charAt(0).toUpperCase() + mode.slice(1);
+    }
+    function cycleTheme(){
+      const order = ["light", "dark", "system"];
+      const current = document.documentElement.getAttribute("data-theme") || "system";
+      const next = order[(order.indexOf(current)+1)%order.length];
+      setTheme(next);
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      const current = document.documentElement.getAttribute("data-theme") || "system";
+      const label = document.getElementById("mode-label");
+      if(label) label.textContent = current.charAt(0).toUpperCase() + current.slice(1);
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="title">Software Projects</div>
+        <p class="subtitle">Tools for engineering simulation, optimization, acoustics, and control systems - crafted with performance and clarity in mind.</p>
+      </div>
+      <div class="controls">
+        <span class="mode-chip"><i class="fa-regular fa-moon"></i> <span id="mode-label">System</span></span>
+        <button class="toggle" onclick="cycleTheme()"><i class="fa-solid fa-circle-half-stroke"></i> Toggle Theme</button>
+      </div>
+    </header>
+
+    <section class="grid">
+      <!-- New: DXF Hatch Generator Pro v2.0 -->
+      <article class="card">
+        <div class="thumb">
+          <img src="software_images/dxf-hatch-pro.png" alt="DXF Hatch Generator Pro interface (preview)" onerror="this.parentElement.textContent='DXF HATCH PRO'; this.remove();" />
+        </div>
+        <div class="content">
+          <h3 class="project-title">DXF Hatch Generator Pro v2.0</h3>
+          <p class="desc">A modern GUI to generate and preview professional DXF hatch patterns, with smart auto‑scale, measurement tools, batch processing, and an optional 🤖 AI Assistant for image‑based boundary creation.</p>
+          <div class="tech"><strong>Technologies:</strong> PySide6, ezdxf, Matplotlib, NumPy, OpenCV (optional), Torch/Diffusers (optional)</div>
+          <div class="tags">
+            <span class="tag">GUI</span><span class="tag">CAD</span><span class="tag">Batch</span><span class="tag">AI Assistant</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="#" onclick="alert('Repository link coming soon.'); return false;"><i class="fa-brands fa-github"></i> Doccument</a>
+            <a class="btn secondary" href="#" onclick="alert('Contact me for more information'); return false;"><i class="fa-solid fa-download"></i> Download</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PyEGRO -->
+      <article class="card">
+        <div class="thumb">
+          <img src="software_images/pyegro-demo.png" alt="PyEGRO Interface" onerror="this.parentElement.textContent='PyEGRO'; this.remove();" />
+        </div>
+        <div class="content">
+          <h3 class="project-title">PyEGRO Library</h3>
+          <p class="desc">Efficient Global Robust Optimization with uncertainty propagation, adaptive sampling, and robust design workflows.</p>
+          <div class="tech"><strong>Technologies:</strong> Python, NumPy, SciPy, GPyTorch</div>
+          <div class="tags"><span class="tag">Optimization</span><span class="tag">Uncertainty</span><span class="tag">Surrogates</span></div>
+          <div class="actions"><a class="btn" href="https://twanglom.github.io/PyEGRO/"><i class="fa-brands fa-github"></i> Documentation</a></div>
+        </div>
+      </article>
+
+      <!-- MES-Acoustic -->
+      <article class="card">
+        <div class="thumb">
+          <img src="software_images/MES-Software.png" alt="MES-Acoustic Interface" onerror="this.parentElement.textContent='MES-ACOUSTIC'; this.remove();" />
+        </div>
+        <div class="content">
+          <h3 class="project-title">MES‑Acoustic v1.0</h3>
+          <p class="desc">SPL simulation for vibroacoustic environments with an intuitive GUI for setup, solving, and visualization.</p>
+          <div class="tech"><strong>Technologies:</strong> Python, PySide6, NumPy, Energy Method, Ray tracing</div>
+          <div class="tags"><span class="tag">Acoustics</span><span class="tag">Simulation</span><span class="tag">GUI</span></div>
+          <div class="actions"><a class="btn" href="https://github.com/twanglom/mes-acoustic"><i class="fa-brands fa-github"></i> GitHub</a></div>
+        </div>
+      </article>
+
+      <!-- FFT Analysis -->
+      <article class="card">
+        <div class="thumb">
+          <img src="software_images/fft-analysis-demo.png" alt="FFT Analysis Interface" onerror="this.parentElement.textContent='FFT ANALYSIS'; this.remove();" />
+        </div>
+        <div class="content">
+          <h3 class="project-title">FFT Analysis Software</h3>
+          <p class="desc">Real‑time vibration signal analysis with sensor interfacing and rich plotting.</p>
+          <div class="tech"><strong>Technologies:</strong> Python, NumPy, SciPy, Tkinter</div>
+          <div class="tags"><span class="tag">Signal Processing</span><span class="tag">Monitoring</span></div>
+          <div class="actions"><a class="btn secondary" href="downloads/fft-analysis.zip"><i class="fa-solid fa-download"></i> Download</a></div>
+        </div>
+      </article>
+
+      <!-- Single-Plane Balancing -->
+      <article class="card">
+        <div class="thumb">
+          <img src="software_images/Balancing-Software.png" alt="Balancing Software Interface" onerror="this.parentElement.textContent='BALANCING'; this.remove();" />
+        </div>
+        <div class="content">
+          <h3 class="project-title">Single‑Plane Balancing v1.2</h3>
+          <p class="desc">Professional rotor balancing with real‑time monitoring, automated calculations, and reporting.</p>
+          <div class="tech"><strong>Technologies:</strong> Python, Qt, NumPy, Matplotlib</div>
+          <div class="tags"><span class="tag">Mechanical</span><span class="tag">Vibration</span></div>
+          <div class="actions"><a class="btn secondary" href="downloads/balancing-system.zip"><i class="fa-solid fa-download"></i> Download</a></div>
+        </div>
+      </article>
+
+      <!-- Process Control -->
+      <article class="card">
+        <div class="thumb">
+          <img src="software_images/process-control-demo.png" alt="Process Control Interface" onerror="this.parentElement.textContent='PROCESS CONTROL'; this.remove();" />
+        </div>
+        <div class="content">
+          <h3 class="project-title">Process Control Software</h3>
+          <p class="desc">GUI for temperature and motor speed control with PID tuning and live plots.</p>
+          <div class="tech"><strong>Technologies:</strong> Python, PySide6, Control Systems</div>
+          <div class="tags"><span class="tag">PID</span><span class="tag">Real‑time</span></div>
+          <div class="actions"><a class="btn secondary" href="downloads/process-control.zip"><i class="fa-solid fa-download"></i> Download</a></div>
+        </div>
+      </article>
+      <!-- Measurement and Calibration Software -->
+      <article class="card">
+        <div class="thumb">
+          <img src="software_images/measurement-calibration-demo.png" alt="Measurement and Calibration Software Interface" onerror="this.parentElement.textContent='MEASUREMENT & CALIBRATION'; this.remove();" />
+        </div>
+        <div class="content">
+          <h3 class="project-title">Measurement and Calibration Software</h3>
+          <p class="desc">GUI for precise measurement acquisition and calibration tasks, supporting various sensors and export formats.</p>
+          <div class="tech"><strong>Technologies:</strong> Python, PySide6, NumPy, Matplotlib</div>
+          <div class="tags"><span class="tag">Measurement</span><span class="tag">Calibration</span></div>
+          <div class="actions"><a class="btn secondary" href="downloads/measurement-calibration.zip"><i class="fa-solid fa-download"></i> Download</a></div>
+        </div>
+      </article>
+    </section>
+
+    <footer>© Thanasak Wanglomklang — Updated for modern design with Light/Dark/System theme.</footer>
+  </div>
+</body>
+</html>
