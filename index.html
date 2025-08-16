@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thanasak Wanglomklang – Home</title>
+  <title>Thanasak Wanglomklang — Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,21 +22,47 @@
       --success:#22c55e; --warning:#fbbf24;
     }
     @media (prefers-color-scheme: dark){
-      :root[data-theme="system"]{ color-scheme: dark; --bg:#0b1220; --card:#10192b; --text:#e5efff; --muted:#9fb0c6; --accent:#60a5fa; --border:#1e293b; --shadow:0 10px 30px rgba(1,4,12,.6); --success:#22c55e; --warning:#fbbf24; }
+      :root[data-theme="system"]{ 
+        color-scheme: dark; 
+        --bg:#0b1220; --card:#10192b; --text:#e5efff; --muted:#9fb0c6; 
+        --accent:#60a5fa; --border:#1e293b; --shadow:0 10px 30px rgba(1,4,12,.6); 
+        --success:#22c55e; --warning:#fbbf24; 
+      }
     }
-    body{margin:0; background: radial-gradient(1200px 600px at 10% -10%, rgba(59,130,246,.08), transparent 60%),
-                               radial-gradient(900px 500px at 110% 10%, rgba(34,197,94,.10), transparent 60%),
-                               var(--bg);
-         font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text);}
-    .nav-wrap{position:sticky; top:0; z-index:50; background:color-mix(in srgb, var(--card) 85%, transparent); backdrop-filter: blur(8px); border-bottom:1px solid var(--border)}
-    .navbar{max-width:1200px; margin:0 auto; padding:10px 16px; display:flex; align-items:center; justify-content:space-between}
+    body{
+      margin:0; 
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(59,130,246,.08), transparent 60%),
+                  radial-gradient(900px 500px at 110% 10%, rgba(34,197,94,.10), transparent 60%),
+                  var(--bg);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; 
+      color:var(--text);
+    }
+    .nav-wrap{
+      position:sticky; top:0; z-index:50; 
+      background:color-mix(in srgb, var(--card) 85%, transparent); 
+      backdrop-filter: blur(8px); border-bottom:1px solid var(--border)
+    }
+    .navbar{
+      max-width:1200px; margin:0 auto; padding:10px 16px; 
+      display:flex; align-items:center; justify-content:space-between
+    }
     .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:-.02em}
     .brand img{width:38px; height:38px; border-radius:10px; object-fit:cover; border:1px solid var(--border)}
     .nav-links{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
-    .nav-links a{color:var(--text); text-decoration:none; font-weight:600; padding:8px 10px; border-radius:10px}
+    .nav-links a{
+      color:var(--text); text-decoration:none; font-weight:600; 
+      padding:8px 10px; border-radius:10px
+    }
     .nav-links a:hover{background: color-mix(in srgb, var(--accent) 12%, transparent)}
-    .toggle{border:1px solid var(--border); background:var(--card); color:var(--text); padding:8px 12px; border-radius:12px; box-shadow:var(--shadow); cursor:pointer; font-weight:700}
-    header.hero{max-width:1200px; margin:0 auto; padding:28px 16px 10px; display:grid; gap:22px; grid-template-columns: 1fr; align-items:center}
+    .toggle{
+      border:1px solid var(--border); background:var(--card); color:var(--text); 
+      padding:8px 12px; border-radius:12px; box-shadow:var(--shadow); 
+      cursor:pointer; font-weight:700
+    }
+    header.hero{
+      max-width:1200px; margin:0 auto; padding:28px 16px 10px; 
+      display:grid; gap:22px; grid-template-columns: 1fr; align-items:center
+    }
     @media (min-width:900px){ header.hero{grid-template-columns: 1fr auto} }
     .profile{display:flex; gap:16px; align-items:center}
     .profile img{width:84px; height:84px; border-radius:20px; object-fit:cover; border:2px solid var(--border)}
@@ -45,194 +71,66 @@
     .contact-info{display:flex; gap:16px; flex-wrap:wrap; margin:8px 0; color:var(--muted); font-size:0.95em}
     .contact-info span{display:flex; align-items:center; gap:6px}
     .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
-    .btn-cta{display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:#fff; padding:10px 14px; border-radius:12px; font-weight:800; text-decoration:none; transition:all 0.2s}
-    .btn-cta:hover{background:color-mix(in srgb, var(--accent) 85%, black); color:#fff; text-decoration:none}
-    .btn-ghost{display:inline-flex; align-items:center; gap:8px; background:var(--card); color:var(--text); padding:10px 14px; border-radius:12px; font-weight:800; text-decoration:none; border:1px solid var(--border); transition:all 0.2s}
-    .btn-ghost:hover{background:color-mix(in srgb, var(--accent) 8%, var(--card)); color:var(--text); text-decoration:none}
+    .btn-cta{
+      display:inline-flex; align-items:center; gap:8px; background:var(--accent); 
+      color:#fff; padding:10px 14px; border-radius:12px; font-weight:800; 
+      text-decoration:none; transition:all 0.2s
+    }
+    .btn-cta:hover{
+      background:color-mix(in srgb, var(--accent) 85%, black); 
+      color:#fff; text-decoration:none
+    }
+    .btn-ghost{
+      display:inline-flex; align-items:center; gap:8px; background:var(--card); 
+      color:var(--text); padding:10px 14px; border-radius:12px; font-weight:800; 
+      text-decoration:none; border:1px solid var(--border); transition:all 0.2s
+    }
+    .btn-ghost:hover{
+      background:color-mix(in srgb, var(--accent) 8%, var(--card)); 
+      color:var(--text); text-decoration:none
+    }
     .section{max-width:1200px; margin:0 auto; padding:20px 16px 40px}
     .card{background:var(--card); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow)}
-    .carousel .carousel-caption{background: color-mix(in srgb, var(--card) 90%, transparent); border-radius:12px; padding:15px 20px; color:var(--text); backdrop-filter: blur(8px); bottom: 20px; left: 20px; right: 20px}
-    .carousel-item img{border-radius:16px; border:1px solid var(--border); box-shadow:var(--shadow); width:100%; height:400px; object-fit:contain; background: var(--card)}
-    .carousel-inner{border-radius:18px; overflow:hidden; background:var(--card); border:1px solid var(--border)}
+    .carousel .carousel-caption{
+      background: color-mix(in srgb, var(--card) 90%, transparent); 
+      border-radius:12px; padding:15px 20px; color:var(--text); 
+      backdrop-filter: blur(8px); bottom: 20px; left: 20px; right: 20px
+    }
+    .carousel-item img{
+      border-radius:16px; border:1px solid var(--border); box-shadow:var(--shadow); 
+      width:100%; height:400px; object-fit:contain; background: var(--card)
+    }
+    .carousel-inner{
+      border-radius:18px; overflow:hidden; background:var(--card); 
+      border:1px solid var(--border)
+    }
     @media (max-width: 768px) {
       .carousel-item img{height:280px}
       .carousel .carousel-caption{padding:10px 15px; bottom: 15px; left: 15px; right: 15px}
       .contact-info{flex-direction:column; gap:8px}
     }
-    .fallback-message{text-align:center; padding:40px; color:var(--muted); background:var(--card); border-radius:16px; border:1px solid var(--border)}
-    .awards-section{background:var(--card); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow); padding:24px; margin-bottom:30px}
+    .fallback-message{
+      text-align:center; padding:40px; color:var(--muted); 
+      background:var(--card); border-radius:16px; border:1px solid var(--border)
+    }
+    .awards-section{
+      background:var(--card); border:1px solid var(--border); 
+      border-radius:18px; box-shadow:var(--shadow); padding:24px; margin-bottom:30px
+    }
     .awards-grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr))}
-    .award-item{display:flex; align-items:center; gap:12px; padding:12px; background:color-mix(in srgb, var(--success) 8%, transparent); border-radius:12px; border:1px solid color-mix(in srgb, var(--success) 20%, transparent)}
-    .award-icon{width:32px; height:32px; border-radius:8px; background:var(--success); color:white; display:flex; align-items:center; justify-content:center; font-size:16px}
+    .award-item{
+      display:flex; align-items:center; gap:12px; padding:12px; 
+      background:color-mix(in srgb, var(--success) 8%, transparent); 
+      border-radius:12px; border:1px solid color-mix(in srgb, var(--success) 20%, transparent)
+    }
+    .award-icon{
+      width:32px; height:32px; border-radius:8px; background:var(--success); 
+      color:white; display:flex; align-items:center; justify-content:center; font-size:16px
+    }
     .award-content h4{margin:0; font-size:14px; font-weight:700; color:var(--text)}
     .award-content p{margin:0; font-size:13px; color:var(--muted)}
     footer{max-width:1200px; margin:0 auto; padding:20px 16px 60px; color:var(--muted); text-align:center}
   </style>
-  <script>
-    // Theme persistence
-    (function(){
-      const saved = localStorage.getItem("theme-choice");
-      if(saved){ document.documentElement.setAttribute("data-theme", saved); }
-    })();
-    
-    function setTheme(mode){
-      document.documentElement.setAttribute("data-theme", mode);
-      localStorage.setItem("theme-choice", mode);
-      document.getElementById("mode-label").textContent = mode.charAt(0).toUpperCase()+mode.slice(1);
-    }
-    
-    function cycleTheme(){
-      const order = ["light","dark","system"];
-      const cur = document.documentElement.getAttribute("data-theme") || "system";
-      const next = order[(order.indexOf(cur)+1)%order.length];
-      setTheme(next);
-    }
-
-    // Updated project data to match CV
-    const projectData = [
-      {
-        title: "DXF Hatch Generator Pro v2.0",
-        desc: "Generate hatch patterns with AI Assistant for image-based boundary creation.",
-        img: "software_images/dxf-hatch-pro.png",
-        href: "dxf_hatch_docs_features.html"
-      },
-      {
-        title: "PyEGRO Library",
-        desc: "Open-source Python library for optimization under uncertainty. Integrating adaptive infill for efficient experiment sampling with GPR and ANN model support for accelerating optimization loops.",
-        img: "software_images/pyegro-demo.png",
-        href: "https://twanglom.github.io/PyEGRO/"
-      },
-      {
-        title: "MES-Acoustic v1.0",
-        desc: "Software for predicting and optimizing noise in vibroacoustic environments with user-friendly visualization and parameter setup for SPL simulation.",
-        img: "software_images/MES-Software.png",
-        href: "https://github.com/twanglom/mes-acoustic"
-      },
-      {
-        title: "FFT Analysis Software",
-        desc: "Program for vibration sensor interfacing and signal processing. Applied in educational training sessions for real-time vibration analysis.",
-        img: "software_images/fft-analysis-demo.png",
-        href: "projects_v2.html"
-      },
-      {
-        title: "Balancing System Software v1.2",
-        desc: "Tool for single-plane rotor balancing used in industrial training programs with real-time monitoring and automated calculations.",
-        img: "software_images/Balancing-Software.png",
-        href: "projects_v2.html"
-      },
-      {
-        title: "Process Control Software",
-        desc: "GUI-based application for temperature and motor speed control demonstrating PID tuning with live plotting and control system analysis.",
-        img: "software_images/process-control-demo.png",
-        href: "projects_v2.html"
-      },
-      {
-        title: "Measurement and Calibration Software",
-        desc: "Software solution for analog sensor calibration (e.g., pressure, temperature) with precise measurement acquisition and various export formats.",
-        img: "software_images/measurement-calibration-demo.png",
-        href: "projects_v2.html"
-      }
-    ];
-
-    // Build project carousel
-    function buildProjectCarousel(){
-      const carouselInner = document.getElementById("projectCarouselInner");
-      const indicators = document.getElementById("projectIndicators");
-      
-      if(!carouselInner || !indicators) {
-        console.error("Carousel elements not found");
-        return;
-      }
-
-      try{
-        // First try to fetch from projects_v2.html
-        fetch("projects_v2.html")
-          .then(response => {
-            if(!response.ok) throw new Error("Failed to fetch projects");
-            return response.text();
-          })
-          .then(html => {
-            const doc = new DOMParser().parseFromString(html, "text/html");
-            const cards = Array.from(doc.querySelectorAll("article.card"));
-            
-            if(cards.length === 0) throw new Error("No project cards found");
-            
-            const slides = cards.slice(0, 6).map((card, idx) => {
-              const title = card.querySelector(".project-title")?.textContent?.trim() || "Project";
-              const desc = card.querySelector(".desc")?.textContent?.trim() || "";
-              const img = card.querySelector(".thumb img")?.getAttribute("src");
-              const linkEl = card.querySelector(".actions a");
-              const href = linkEl?.getAttribute("href") || "projects_v2.html";
-              return {title, desc, img, href, active: idx===0};
-            });
-            
-            renderCarousel(slides);
-          })
-          .catch(error => {
-            console.warn("Failed to load from projects_v2.html, using fallback:", error);
-            renderCarousel(projectData.map((project, idx) => ({
-              ...project,
-              active: idx === 0
-            })));
-          });
-      } catch(e) {
-        console.error("Error building carousel:", e);
-        renderCarousel(projectData.map((project, idx) => ({
-          ...project,
-          active: idx === 0
-        })));
-      }
-    }
-
-    function renderCarousel(slides) {
-      const carouselInner = document.getElementById("projectCarouselInner");
-      const indicators = document.getElementById("projectIndicators");
-      
-      if(slides.length === 0) {
-        carouselInner.innerHTML = `
-          <div class="fallback-message">
-            <h5>No projects found</h5>
-            <p><a href="projects_v2.html">View all projects →</a></p>
-          </div>`;
-        indicators.innerHTML = '';
-        return;
-      }
-
-      // Build indicators
-      indicators.innerHTML = slides.map((s,i) => 
-        `<button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="${i}" 
-                 class="${i===0?'active':''}" aria-current="${i===0?'true':'false'}" 
-                 aria-label="Slide ${i+1}"></button>`
-      ).join("");
-
-      // Build slides
-      carouselInner.innerHTML = slides.map(s => `
-        <div class="carousel-item ${s.active?'active':''}">
-          <a href="${s.href}" target="_blank" style="text-decoration:none">
-            <img src="${s.img || 'images/placeholder-project.png'}" 
-                 class="d-block w-100" alt="${s.title}"
-                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIyNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UHJvamVjdCBJbWFnZTwvdGV4dD48L3N2Zz4='">
-            <div class="carousel-caption">
-              <h5>${s.title}</h5>
-              <p>${s.desc}</p>
-            </div>
-          </a>
-        </div>`
-      ).join("");
-
-      console.log(`Carousel built successfully with ${slides.length} slides`);
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      // Set initial theme label
-      const current = document.documentElement.getAttribute("data-theme") || "system";
-      const label = document.getElementById("mode-label");
-      if(label) label.textContent = current.charAt(0).toUpperCase() + current.slice(1);
-      
-      // Build carousel
-      buildProjectCarousel();
-    });
-  </script>
 </head>
 <body>
   <div class="nav-wrap">
@@ -248,27 +146,37 @@
         <a href="projects_v2.html">Projects</a>
         <a href="publication.html">Publications</a>
         <a href="contact.html">Contact</a>
-        <span class="toggle"><i class="fa-regular fa-moon"></i> <span id="mode-label">System</span></span>
-        <button class="toggle" onclick="cycleTheme()"><i class="fa-solid fa-circle-half-stroke"></i> Toggle Theme</button>
+        <button class="toggle" onclick="cycleTheme()">
+          <i class="fa-solid fa-circle-half-stroke"></i> 
+          <span id="mode-label">System</span>
+        </button>
       </div>
     </div>
   </div>
 
   <header class="hero">
     <div>
-      <h3 class="headline">Mechanical Engineering</h3>
-      <p class="sub">PhD Student at École Centrale de Lyon specializing in optimization under uncertainty, machine learning, vibroacoustic simulation, and control systems. Experienced in teaching, industrial training, software development, and hardware prototyping.</p>
-      
+      <h1 class="headline">Mechanical Engineering</h1>
+      <h4 class="sub">PhD Student at École Centrale de Lyon</h4>
+      <p class="sub">specializing in optimization under uncertainty, machine learning, vibroacoustic simulation, and control systems. Experienced in teaching, industrial training, software development, and hardware prototyping.</p>
       <div class="contact-info">
         <span><i class="fas fa-envelope"></i> thanasak.wang@gmail.com</span>
         <span><i class="fas fa-map-marker-alt"></i> Lyon, France</span>
       </div>
 
       <div class="actions">
-        <a class="btn-cta" href="files/Thanasak_CV.pdf" download><i class="fas fa-download"></i> Download CV</a>
-        <a class="btn-ghost" href="mailto:thanasak.wang@gmail.com"><i class="far fa-envelope"></i> Contact</a>
-        <a class="btn-ghost" href="https://github.com/twanglom" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a class="btn-ghost" href="https://linkedin.com/in/twanglom" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a class="btn-cta" href="files/Thanasak_CV.pdf" download>
+          <i class="fas fa-download"></i> Download CV
+        </a>
+        <a class="btn-ghost" href="mailto:thanasak.wang@gmail.com">
+          <i class="far fa-envelope"></i> Contact
+        </a>
+        <a class="btn-ghost" href="https://github.com/twanglom" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a class="btn-ghost" href="https://linkedin.com/in/twanglom" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
       </div>
     </div>
   </header>
@@ -298,5 +206,170 @@
   </main>
 
   <footer>© Thanasak Wanglomklang</footer>
+
+  <script>
+    // Theme system
+    const themeData = JSON.parse(localStorage.getItem('theme-data') || '{"mode": "system"}');
+    document.documentElement.setAttribute('data-theme', themeData.mode);
+
+    function setTheme(mode) {
+      document.documentElement.setAttribute('data-theme', mode);
+      const data = { mode, timestamp: Date.now() };
+      localStorage.setItem('theme-data', JSON.stringify(data));
+      document.getElementById('mode-label').textContent = 
+        mode.charAt(0).toUpperCase() + mode.slice(1);
+    }
+
+    function cycleTheme() {
+      const themes = ['light', 'dark', 'system'];
+      const current = document.documentElement.getAttribute('data-theme') || 'system';
+      const nextIndex = (themes.indexOf(current) + 1) % themes.length;
+      setTheme(themes[nextIndex]);
+    }
+
+    // Project data
+    const projectData = [
+      {
+        title: "DXF Hatch Generator Pro v2.0",
+        desc: "Generate hatch patterns with AI Assistant for image-based boundary creation.",
+        img: "software_images/dxf-hatch-pro.png",
+        href: "dxf_hatch_docs_features.html"
+      },
+      {
+        title: "PyEGRO Library",
+        desc: "Open-source Python library for optimization under uncertainty. Integrating adaptive infill for efficient experiment sampling with GPR and ANN model support for accelerating optimization loops.",
+        img: "software_images/pyegro-demo.png",
+        href: "https://twanglom.github.io/PyEGRO/"
+      },
+      {
+        title: "MES-Acoustic v1.0",
+        desc: "Software for predicting and optimizing noise in vibroacoustic environments with user-friendly visualization and parameter setup for SPL simulation.",
+        img: "software_images/MES-Software.png",
+        href: "https://github.com/twanglom/mes-acoustic"
+      },
+      {
+        title: "FFT Analysis Software",
+        desc: "Program for vibration sensor interfacing and signal processing. Applied in educational training sessions for real-time vibration analysis.",
+        img: "software_images/fft-analysis-demo.png",
+        href: "projects_v2.html"
+      },
+      {
+        title: "Wireless Platform for Nursing and CPR Training",
+        desc: "Raspberry Pi-based wireless training system for CPR and nursing education with real-time feedback and instructor monitoring.",
+        img: "software_images/cpr_humain_demo.png",
+        href: "downloads/cpr_humain.zip"
+      },
+      {
+        title: "Balancing System Software v1.2",
+        desc: "Tool for single-plane rotor balancing used in industrial training programs with real-time monitoring and automated calculations.",
+        img: "software_images/Balancing-Software.png",
+        href: "projects_v2.html"
+      },
+      {
+        title: "Process Control Software",
+        desc: "GUI-based application for temperature and motor speed control demonstrating PID tuning with live plotting and control system analysis.",
+        img: "software_images/process-control-demo.png",
+        href: "projects_v2.html"
+      },
+      {
+        title: "Measurement and Calibration Software",
+        desc: "Software solution for analog sensor calibration (e.g., pressure, temperature) with precise measurement acquisition and various export formats.",
+        img: "software_images/measurement-calibration-demo.png",
+        href: "projects_v2.html"
+      }
+    ];
+
+    function renderCarousel(slides) {
+      const carouselInner = document.getElementById('projectCarouselInner');
+      const indicators = document.getElementById('projectIndicators');
+      
+      if (!carouselInner || !indicators) {
+        console.error('Carousel elements not found');
+        return;
+      }
+
+      if (slides.length === 0) {
+        carouselInner.innerHTML = `
+          <div class="fallback-message">
+            <h5>No projects found</h5>
+            <p><a href="projects_v2.html">View all projects →</a></p>
+          </div>`;
+        indicators.innerHTML = '';
+        return;
+      }
+
+      // Build indicators
+      indicators.innerHTML = slides.map((s, i) => 
+        `<button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="${i}" 
+                 class="${i === 0 ? 'active' : ''}" aria-current="${i === 0 ? 'true' : 'false'}" 
+                 aria-label="Slide ${i + 1}"></button>`
+      ).join('');
+
+      // Build slides
+      carouselInner.innerHTML = slides.map((s, i) => `
+        <div class="carousel-item ${i === 0 ? 'active' : ''}">
+          <a href="${s.href}" target="_blank" style="text-decoration:none">
+            <img src="${s.img || 'images/placeholder-project.png'}" 
+                 class="d-block w-100" alt="${s.title}"
+                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIyNSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UHJvamVjdCBJbWFnZTwvdGV4dD48L3N2Zz4='">
+            <div class="carousel-caption">
+              <h5>${s.title}</h5>
+              <p>${s.desc}</p>
+            </div>
+          </a>
+        </div>`
+      ).join('');
+
+      console.log(`Carousel built successfully with ${slides.length} slides`);
+    }
+
+    function buildProjectCarousel() {
+      try {
+        // Try to fetch from projects_v2.html first
+        fetch('projects_v2.html')
+          .then(response => {
+            if (!response.ok) throw new Error('Failed to fetch projects');
+            return response.text();
+          })
+          .then(html => {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const cards = Array.from(doc.querySelectorAll('article.card'));
+            
+            if (cards.length === 0) throw new Error('No project cards found');
+            
+            const slides = cards.slice(0, 8).map((card) => {
+              const title = card.querySelector('.project-title')?.textContent?.trim() || 'Project';
+              const desc = card.querySelector('.desc')?.textContent?.trim() || '';
+              const img = card.querySelector('.thumb img')?.getAttribute('src');
+              const linkEl = card.querySelector('.actions a');
+              const href = linkEl?.getAttribute('href') || 'projects_v2.html';
+              return { title, desc, img, href };
+            });
+            
+            renderCarousel(slides);
+          })
+          .catch(error => {
+            console.warn('Failed to load from projects_v2.html, using fallback:', error);
+            renderCarousel(projectData);
+          });
+      } catch (e) {
+        console.error('Error building carousel:', e);
+        renderCarousel(projectData);
+      }
+    }
+
+    // Initialize on DOM load
+    document.addEventListener('DOMContentLoaded', () => {
+      // Set initial theme label
+      const current = document.documentElement.getAttribute('data-theme') || 'system';
+      const label = document.getElementById('mode-label');
+      if (label) {
+        label.textContent = current.charAt(0).toUpperCase() + current.slice(1);
+      }
+      
+      // Build carousel
+      buildProjectCarousel();
+    });
+  </script>
 </body>
 </html>
