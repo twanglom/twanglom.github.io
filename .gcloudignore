@@ -1,0 +1,12 @@
+.git
+**/__pycache__
+**/.venv
+**/node_modules
+*.pyc
+firebase-debug.log
+backup/
+old-version/
+frontend/src/
+frontend/public/
+frontend/.env*
+fullstack-deploy-guide.docx

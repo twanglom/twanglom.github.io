@@ -1,0 +1,26 @@
+__pycache__/
+*.pyc
+*.pyc.*
+.venv/
+node_modules/
+dist/
+frontend/node_modules/
+frontend/dist/
+RotorAI/frontend/node_modules/
+RotorAI/frontend/dist/
+rotor-digital-twin/frontend/node_modules/
+rotor-digital-twin/frontend/dist/
+firebase-debug.log
+.env
+.env.local
+backup/
+old-version/
+
+# Local source/reference files that are not part of the deployed website
+/fullstack-deploy-guide.docx
+/promt.txt
+/ground-truth.png
+/pi-gnn-for-generative-mechanical-part-design-animation.mp4
+/pi-gnn-for-generative-mechanical-part-design.png
+/frontend/public/research/pi-gnn-for-generative-mechanical-part-design-animation.mp4
+/frontend/public/research/pi-gnn-for-generative-mechanical-part-design.png

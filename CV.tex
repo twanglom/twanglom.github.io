@@ -1,0 +1,424 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[a4paper, left=12pt, right=0pt, top=0pt, bottom=0pt, nohead, nofoot]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{./}{../}}
+\usepackage{fontawesome5}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amssymb}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+
+%% ══════════════════════════════════════════════════════════════════
+%% THEME — Dark Navy Sidebar / Modern Blue
+\definecolor{sidecolor}  {HTML}{162847}   % dark navy sidebar
+\definecolor{accent}     {HTML}{1A365D}   % section headings
+\definecolor{accentlight}{HTML}{7DD3F0}   % icons & bars (brighter sky blue)
+\definecolor{sidegray}{HTML}{D0E8F8}      % secondary sidebar text (much brighter)
+\definecolor{sidetext}{HTML}{FFFFFF}      % primary sidebar text (pure white)
+\definecolor{darktext}{HTML}{1A2E42}      % main col primary
+\definecolor{bodytext}{HTML}{2A4A66}      % main col body
+\definecolor{graytext}{HTML}{4A6A8A}      % main col secondary
+\definecolor{linecolor}{HTML}{C0D4E8}     % dividers in main col
+\definecolor{tagunder}{HTML}{1A5C96}
+\definecolor{tagsub}{HTML}{2A7A4A}
+\definecolor{sideborder}{HTML}{2D5A8A}    % sidebar divider
+
+%% ── Column widths ─────────────────────────────────────────────────
+\newlength{\sbW}\setlength{\sbW}{63mm}
+\newlength{\sbC}\setlength{\sbC}{54mm}
+\newlength{\mnW}\setlength{\mnW}{130mm}
+%% full-width main column for page 2 (no sidebar)
+\newlength{\fullW}\setlength{\fullW}{188mm}
+
+%% ── Sidebar helpers ───────────────────────────────────────────────
+\newcommand{\sideheading}[1]{%
+  \vspace{5pt}%
+  {\color{sideborder}\rule{\sbC}{0.3pt}}\par\vspace{2pt}%
+  {\color{accentlight}\fontsize{6}{8}\selectfont\bfseries\MakeUppercase{#1}}\par\vspace{4pt}%
+}
+\newcommand{\skillbar}[2]{%
+  {\color{sidetext}\fontsize{7}{9}\selectfont #1}\par\vspace{0.5pt}%
+  \begin{tikzpicture}
+    \fill[white!15!sidecolor]  (0,0) rectangle (\sbC,1.8pt);
+    \fill[accentlight]        (0,0) rectangle (#2\sbC,1.8pt);
+  \end{tikzpicture}\par\vspace{2pt}%
+}
+
+%% ── Main column helpers ───────────────────────────────────────────
+\newcommand{\mainsec}[1]{%
+  \vspace{5pt}%
+  {\color{accent}\small\bfseries\MakeUppercase{#1}}\par
+  {\color{linecolor}\rule{\mnW}{0.8pt}}\par\vspace{2pt}%
+}
+\newcommand{\mainsecW}[1]{%   % wide version for page 2
+  \vspace{5pt}%
+  {\color{accent}\small\bfseries\MakeUppercase{#1}}\par
+  {\color{linecolor}\rule{\fullW}{0.8pt}}\par\vspace{2pt}%
+}
+\newcommand{\cventry}[4]{%
+  \vspace{2pt}%
+  \noindent\begin{minipage}[t]{\mnW}%
+    {\color{darktext}\small\bfseries #1}\hfill{\color{accent}\scriptsize\bfseries #3}\par
+    {\color{graytext}\footnotesize\itshape #2}\par\vspace{2pt}%
+    {\footnotesize\color{bodytext}#4}%
+  \end{minipage}\par%
+}
+\newcommand{\cventryW}[4]{%   % wide version for page 2
+  \vspace{2pt}%
+  \noindent\begin{minipage}[t]{\fullW}%
+    {\color{darktext}\small\bfseries #1}\hfill{\color{accent}\scriptsize\bfseries #3}\par
+    {\color{graytext}\footnotesize\itshape #2}\par\vspace{2pt}%
+    {\footnotesize\color{bodytext}#4}%
+  \end{minipage}\par%
+}
+\newcommand{\badgeUR}{\,{\fontsize{5}{6}\selectfont\bfseries\color{white}%
+  \colorbox{tagunder}{~Under Review~}}\,}
+\newcommand{\badgeSub}{\,{\fontsize{5}{6}\selectfont\bfseries\color{white}%
+  \colorbox{tagsub}{~Submitted~}}\,}
+\newcommand{\cvbullet}[1]{%
+  {\footnotesize\color{bodytext}%
+   \hspace{3pt}{\color{accent}\tiny$\blacktriangleright$}\enspace#1\par}%
+}
+
+%%=================================================================
+\begin{document}
+
+%%─── PAGE 1 ──────────────────────────────────────────────────────
+\noindent
+\colorbox{sidecolor}{%
+  \parbox[t][\dimexpr\paperheight-18pt\relax][s]{\sbW}{%
+    \vspace*{3pt}
+    \begin{center}
+      \begin{tikzpicture}
+        \clip (0,0) circle (1.35cm);
+        \node at (-0.2,-0.3cm) {\includegraphics[width=3.5cm]{profile3.jpg}};
+      \end{tikzpicture}\\[5pt]
+      {\color{sidetext}\fontsize{11}{13}\selectfont\bfseries Thanasak}\\[1pt]
+      {\color{sidetext}\fontsize{11}{13}\selectfont\bfseries Wanglomklang}\\[3pt]
+      {\color{sidegray}\fontsize{7}{9}\selectfont\makebox[\sbC][c]{Mechanical Engineer / AI Researcher}}
+    \end{center}
+    \hspace*{4pt}\begin{minipage}{\sbC}
+
+    \sideheading{Contact}
+    {\fontsize{7}{9}\selectfont
+      \color{accentlight}\faMapMarker*\enspace\color{sidetext}Fukuoka, Japan\par\vspace{2pt}
+      \color{accentlight}\faEnvelope\enspace\color{sidegray}%
+        \href{mailto:thanasak.wanglomklang@ec-lyon.fr}{thanasak.wang@gmail.com}\par\vspace{2pt}
+      \color{accentlight}\faPhone\enspace\color{sidegray}+81\,90\,5405\,6541\par\vspace{2pt}
+      \color{accentlight}\faCalendar*\enspace\color{sidegray}24 November 1995\par\vspace{2pt}
+      \color{accentlight}\faGlobe\enspace\color{sidegray}%
+        \href{https://twanglom.github.io}{twanglom.github.io}\par\vspace{2pt}
+      \color{accentlight}\faGraduationCap\enspace\color{sidegray}%
+        \href{https://scholar.google.com/citations?user=6pSBbQEAAAAJ}{Google Scholar}\par\vspace{2pt}
+      \color{accentlight}\faGithub\enspace\color{sidegray}%
+        \href{https://github.com/twanglom}{github.com/twanglom}\par\vspace{2pt}
+    }
+
+    \sideheading{Education}
+    {\fontsize{7}{9}\selectfont
+      \color{sidetext}\bfseries PhD $\cdot$ Mechanical Engineering\normalfont\par
+      \color{sidegray}\'Ecole Centrale de Lyon, France\par
+      \color{accentlight}2023 -- Present\par\vspace{2pt}
+      \color{sidetext}\bfseries M.Eng $\cdot$ Mechatronic Engineering\normalfont\par
+      \color{sidegray}Suranaree Univ.\ of Technology, TH\par
+      \color{accentlight}2018 -- 2019\par\vspace{2pt}
+      \par
+      \color{sidegray}GPAX 4.00 / 4.00%
+      \par\vspace{2pt}
+      \color{sidetext}\bfseries B.Eng $\cdot$ Mechanical Engineering\normalfont\par
+      \color{sidegray}Suranaree Univ.\ of Technology, TH\par
+      \color{accentlight}2014 -- 2018\enspace\color{sidegray}First Class Honors\par
+      \color{sidegray}GPAX 3.94 / 4.00%
+    }
+
+    \sideheading{Languages}
+    {\fontsize{7}{9}\selectfont
+      \color{sidetext}Thai\hfill\color{accentlight}Native\par\vspace{1.5pt}
+      \color{sidetext}English\hfill\color{accentlight}Professional Working\par\vspace{1.5pt}
+      \color{sidetext}French\hfill\color{accentlight}Professional Working\par\vspace{1.5pt}
+      \color{sidetext}Japanese\hfill\color{accentlight}Elementary\par\vspace{1.5pt}
+    }
+
+    \sideheading{Programming}
+    {\fontsize{7}{9}\selectfont
+      \color{sidetext}Python\par\vspace{1.5pt}
+      \color{sidetext}MATLAB / Simulink\par\vspace{1.5pt}
+      \color{sidetext}C / C++\par\vspace{1.5pt}
+    }
+
+    \sideheading{Computational Tools}
+    {\fontsize{7}{9}\selectfont
+      \color{accentlight}\bfseries Software\normalfont\par\vspace{1.5pt}
+      \color{sidegray}COMSOL Multiphysics, MATLAB,\par
+      \color{sidegray}SolidWorks, Gmsh, ParaView,\par
+      \color{sidegray}PyVista, sensors / DAQ\par
+    }
+    \vspace{4pt}
+    {\color{sideborder}\rule{\sbC}{0.3pt}}\par\vspace{3pt}
+    {\fontsize{7}{9}\selectfont
+      \color{accentlight}\bfseries Python Libraries\normalfont\par\vspace{2pt}
+      \color{accentlight}\scriptsize\bfseries Scientific\normalfont\color{sidegray}\fontsize{7}{9}\selectfont\enspace NumPy, SciPy, scikit-learn\par\vspace{1.5pt}
+      \color{accentlight}\scriptsize\bfseries Deep Learning\normalfont\color{sidegray}\fontsize{7}{9}\selectfont\enspace PyTorch, GPyTorch\par\vspace{1.5pt}
+      \color{accentlight}\scriptsize\bfseries Optimization\normalfont\color{sidegray}\fontsize{7}{9}\selectfont\enspace pymoo, SALib, PyEGRO\par\vspace{1.5pt}
+      \color{accentlight}\scriptsize\bfseries Visualization\normalfont\color{sidegray}\fontsize{7}{9}\selectfont\enspace Matplotlib, PyVista\par\vspace{1.5pt}
+      \color{accentlight}\scriptsize\bfseries Meshing\normalfont\color{sidegray}\fontsize{7}{9}\selectfont\enspace Gmsh API, mph (COMSOL)\par
+    }
+    \vspace{4pt}
+    {\color{sideborder}\rule{\sbC}{0.3pt}}\par\vspace{3pt}
+    {\fontsize{7}{9}\selectfont
+      \color{accentlight}\bfseries HPC / Dev\normalfont\par\vspace{1.5pt}
+      \color{sidegray}SLURM, Linux, Git,\par
+      \color{sidegray}PySide6/Tkinter (GUI)\par\vspace{3pt}
+    }
+    \end{minipage}
+    \vfill
+  }%
+}%
+%% ── Main column page 1 ────────────────────────────────────────────
+\begin{minipage}[t]{\dimexpr\textwidth-\sbW\relax}
+\hspace*{7pt}\begin{minipage}[t]{\mnW}
+\vspace*{8pt}
+
+\mainsec{Professional Profile}
+{\small\color{bodytext}
+Mechanical engineer and Physics-AI researcher connecting \textbf{system dynamics, measured signals, and computational modeling} to solve practical engineering problems.
+Background spans precision automation, vibration diagnostics, physics-based simulation, and uncertainty-aware optimization across manufacturing, acoustics, aerodynamics, and materials design.
+Develops interpretable workflows and software tools that turn sensor data and high-fidelity simulations into design insight, diagnostic decisions, and validated research outcomes.\par\vspace{4pt}
+
+{\color{darktext}\bfseries Expertise:\normalfont\color{bodytext}\ }%
+Control systems design, physics-informed AI, surrogate modeling, autoencoder-based reduced-order modeling, sensitivity and uncertainty analysis, vibration diagnostics, system identification, MATLAB/Simulink, Python/C/C++, and engineering software development.%
+}
+
+\vspace*{5pt}
+
+\mainsec{Professional Experience}
+
+\cventry{JSPS Short-Term Postdoctoral Fellow}%
+  {Kyushu University $\cdot$ Fukuoka, Japan}%
+  {Apr 2026 -- Present}{%
+  \cvbullet{Developing physics-informed autoencoder/GNN workflows for nonlinear 3D aerodynamic shape reduction and data-efficient surrogate optimization.}
+}
+
+\vspace{5pt}
+
+\cventry{Visiting Scientist}%
+  {AIMR, Tohoku University $\cdot$ Sendai, Japan}%
+  {May -- Jun 2025}{%
+  \cvbullet{Developed a Physics-AI inverse-design workflow for microscale woven material cells using reduced representations and FEM validation.}
+}
+
+\vspace{5pt}
+
+\cventry{Lecturer - Mechanical \& Mechatronics}%
+  {Suranaree University of Technology $\cdot$ Thailand}%
+  {Dec 2019 -- Sep 2023}{%
+  \cvbullet{Taught control systems and structural vibration at undergraduate and graduate levels.}
+  \cvbullet{Supervised student projects in mechatronics, fault diagnostics, and system modeling.}
+  \cvbullet{Co-authored peer-reviewed publications; delivered industrial training in vibration analysis.}%
+}
+
+\vspace{5pt}
+
+\cventry{R\&D Master Intern - Precision Automation Controls}%
+  {Western Digital Storage Technologies (Thailand) Ltd.}%
+  {Mar 2018 -- Oct 2019}{%
+  \cvbullet{Built data-driven diagnostics from vibration, motor-current, encoder/linear-bearing behavior, and image-derived features for HGA precision-assembly equipment.}
+  \cvbullet{Connected machine-condition signals with positioning behavior and process reliability for monitoring, calibration, and fault detection.}%
+}
+
+\vspace*{10pt}
+
+\mainsec{Selected Engineering Projects}
+
+\cventry{Observer-Based PI Servo Control for HGA Automation}%
+  {Western Digital Storage Technologies (Thailand) Ltd. $\cdot$ ACAM / Slider Attach}%
+  {2018 -- 2020}{%
+  Modeled feed-drive actuator dynamics and linked PI/observer response, encoder/linear-axis faults, positioning errors, and adhesive-dispense indicators to support calibration, monitoring, and slider-attach reliability.
+}
+
+\vspace{8pt}
+
+\cventry{Data Acquisition \& FDC for Precision Assembly Tools}%
+  {Western Digital Storage Technologies (Thailand) Ltd. $\cdot$ Sensors / Vibration / Vision Features}%
+  {2018 -- 2020}{%
+  Built DAQ/FDC workflows using vibration, motor current, and image-derived features with ANOVA, spectrum analysis, and ANN classification to diagnose mount-head, vacuum, bearing, and slider-loss conditions before process alarms.
+}
+
+\vspace{8pt}
+
+\cventry{AI-Driven Inverse Design of Woven Material Cells}%
+  {AIMR Tohoku Univ., Japan\ / LTDS ECL, France $\cdot$ Collaborative}%
+  {2024 -- 2025}{%
+  Developed a semi-supervised ConvAE workflow that reduced a large woven-pattern design space into a compact latent manifold for surrogate-based topology optimization, with FEM-validated errors below 5\%.
+}
+
+\vspace{8pt}
+
+\cventry{PyEGRO: Open-Source Optimization Under Uncertainty}%
+  {Individual Contributor \textnormal{$\cdot$} Open Source \textnormal{$\cdot$} \href{https://twanglom.github.io/PyEGRO/}{twanglom.github.io/PyEGRO}}%
+  {2024}{%
+  Open-source Python library for engineering robust design under uncertainty, integrating GPR/Co-Kriging surrogates, adaptive sampling, and multi-objective evolutionary search.
+}
+\vspace{8pt}
+
+\cventry{MechIntel Digital Twin Platform}%
+  {Individual Contributor \textnormal{$\cdot$} 3D Assets / Sensors / Simulation / Diagnostics}%
+  {2026 -- Present}{%
+  \cvbullet{Building a Digital Twin web platform connecting physical assets, CAD/3D models, simulation outputs, and operational data into live engineering twins.}
+  \cvbullet{Integrating OpenUSD/GLB visualization workflows with sensor/PLC data for monitoring, diagnostics, and predictive-maintenance use cases.}
+}
+\vspace{8pt}
+
+
+\vfill
+{\color{linecolor!60}\rule{\mnW}{0.4pt}}
+
+\end{minipage}
+\end{minipage}
+
+
+
+
+
+
+
+
+
+
+
+
+%%─── PAGE 2  (full-width, no sidebar) ────────────────────────────
+\newpage
+\noindent
+\hspace*{10pt}\begin{minipage}[t]{\fullW}
+
+
+\vspace*{5pt}
+
+
+\mainsecW{Core Competencies}
+{\footnotesize
+\begin{tabular}{@{}>{\bfseries\color{darktext}}p{38mm}@{\hspace{4pt}}>{\color{bodytext}}p{148mm}@{}}
+
+AI \& Deep Learning &
+  Physics-informed AI, autoencoder-based reduced-order modeling, Gaussian Process Regression,
+  Co-Kriging, surrogate modeling, PyTorch, GPyTorch, scikit-learn.\\[3pt]
+
+Optimization \& UQ &
+  Design of Experiments (DOE), surrogate-based optimization, robust design optimization, NSGA-II/pymoo,
+  Sobol sensitivity analysis, adaptive sampling, uncertainty propagation.\\[3pt]
+
+Vibration \& Dynamics &
+  Structural vibration, system dynamics, frequency-domain analysis, actuator/bearing behavior,
+  sensors/DAQ, metrology, vibration-based condition monitoring.\\[3pt]
+
+Control Systems &
+  PI/PID control, observer-based diagnostics, state feedback, closed-loop control,
+  system identification, digital control, MATLAB/Simulink.\\[3pt]
+
+Scientific Software &
+  Python/C/C++, COMSOL, SolidWorks, Gmsh, ParaView, PyVista, Git,
+  PySide6/Tkinter GUI, open-source engineering tools.\\[3pt]
+
+\end{tabular}%
+}
+
+\vspace{5pt}
+
+\mainsecW{Awards \& Fellowships}
+{\footnotesize
+\begin{tabular}{@{}>{\color{accent}\bfseries\raggedright}p{14mm}@{\hspace{3pt}}>{\bfseries\color{darktext}}p{48mm}@{\hspace{3pt}}>{\color{bodytext}}p{100mm}@{}}
+2026--27 & JSPS Short-Term Fellowship   & Japan Society for the Promotion of Science (JSPS), Kyushu University.
+                                          Competitive fellowship for international researchers; selected for AI-driven engineering design research.\\[2pt]
+2023--26 & Franco-Thai Scholarship      & Campus France / France Government:
+                                          PhD scholarship for outstanding Thai researchers in France.\\[2pt]
+                                          
+2024--25 & Research \& Mobility Grants  & MES-FR / ELyTMaX / CNRS/ MEGA Doctoral School/ \'Ecole Centrale de Lyon.
+                                          Grants supporting research visits to Tohoku University (2025) and Kyushu University (2026).\\[2pt]
+2019     & Best Presentation Award      & MERE 2019 International Conference, Wuhan, China.\\[2pt]
+2019     & Master's Scholarship         & Western Digital (Thailand). Industry scholarship for M.Eng in precision control and fault diagnostics.\\
+\end{tabular}%
+}
+
+\vspace{5pt}
+
+\mainsecW{Selected Publications}
+{\footnotesize\color{graytext}Full list: \href{https://scholar.google.com/citations?user=6pSBbQEAAAAJ&hl=th}{\color{accent}Google Scholar}}\par\vspace{4pt}
+{\footnotesize\color{bodytext}%
+\textbf{[J1]}\ \textbf{Wanglomklang, T.}, Shimoyama, K., Gillot, F., \& Besset, S. (2026).
+Robust shape optimization of acoustic diffusers for spatial sound distribution using Co-Kriging metamodel.
+\textit{Applied Acoustics}, 242, 111047.
+\href{https://doi.org/10.1016/j.apacoust.2025.111047}{doi:10.1016/j.apacoust.2025.111047}.\par\vspace{4pt}
+
+\textbf{[J2]}\ \textbf{Wanglomklang, T.}, Shimoyama, K., Gillot, F., \& Besset, S. (2025).
+Neural-network-based two-stage robust shape optimization for acoustic noise reduction in an aircraft cabin.
+\textit{Engineering Optimization}, 1--19.
+\href{https://doi.org/10.1080/0305215X.2025.2563669}{doi:10.1080/0305215X.2025.2563669}.\par\vspace{4pt}
+
+\textbf{[J3]}\ \textbf{Wanglomklang, T.}, Gillot, F., \& Besset, S. (2025).
+Hybrid Method for Energy flow in Mid-High Frequency Acoustics: Applications in Robust Shape Optimization for Complex Cavities.
+\textit{Journal of Theoretical and Computational Acoustics}.
+\href{https://doi.org/10.1142/S2591728525500033}{doi:10.1142/S2591728525500033}.\par\vspace{4pt}
+
+\textbf{[J4]}\ Chommuangpuck, P., \textbf{Wanglomklang, T.}, Tantrairatn, S., \& Srisertpol, J. (2020).
+Fault tolerant control based on an observer on PI servo design for a high-speed automation machine.
+\textit{Machines}, 8(2), 22.\par\vspace{4pt}
+
+\textbf{[J5]}\ \textbf{Wanglomklang, T.}, Chommaungpuck, P., \& Srisertpol, J. (2020).
+Linear bearing fault detection using an ANN based on a PI servo system with observer for high-speed automation machine.
+\textit{IOP Conf. Series: Materials Science and Engineering}, 717(1), 012011.\par\vspace{4pt}
+
+\textbf{[J6]}\ \textbf{Wanglomklang, T.}, Chommaungpuck, P., Chamniprasart, K., \& Srisertpol, J. (2022).
+Using fault detection and classification techniques for machine breakdown reduction of the HGA process caused by the slider loss defect.
+\textit{Manufacturing Review}, 9, 21.\par\vspace{4pt}
+
+\textbf{[J7]}\ \textbf{Wanglomklang, T.}, Tuntavesesak, T., Tumthong, W., \& Srisertpol, J. (2022).
+Roller bearing faults classification using ANN based on servo system with observer design.
+\textit{WSEAS Transactions on Systems}, 21, 241--246.\par
+}
+
+
+
+\vspace{5pt}
+
+\mainsecW{International Conferences}
+{\footnotesize
+\begin{tabular}{@{}>{\color{accent}\bfseries\raggedright}p{14mm}@{\hspace{3pt}}>{\bfseries\color{darktext}}p{45mm}@{\hspace{2pt}}>{\color{bodytext}}p{127mm}@{}}
+2026 & ELyT Global Workshop    & Sendai, Japan (ELyTMaX / CNRS / Tohoku University)\\
+2025 & ICFD 2025               & Sendai, Japan\\
+2025 & WCSMO 2025              & Kobe, Japan\\
+2025 & DTE/AICOMAS 2025        & Paris, France\\
+2024 & ECCOMAS Congress 2024   & Lisboa, Portugal\\
+2022 & ELECS 2022              & Bern, Switzerland\\
+2019 & MERE 2019               & Wuhan, China\\
+2019 & E-NETT 2019             & Thailand\\
+\end{tabular}%
+}
+
+\vspace{5pt}
+
+\mainsecW{Research Networks \& Collaborators}
+{\footnotesize\color{bodytext}%
+{\color{darktext}\bfseries LTDS, \'Ecole Centrale de Lyon}\enspace---\enspace
+  Assoc.\ Prof.\ S.\ Besset; Assoc.\ Prof.\ F. \ Gillot\par\vspace{2pt}
+{\color{darktext}\bfseries AIMR, Tohoku University}\enspace---\enspace
+  Assist.\ Prof.\ S.\ Mahmoudi\enspace$\cdot$\enspace IRL ELyTMaX / IRN ELyT Global joint lab\par\vspace{2pt}
+{\color{darktext}\bfseries Fluids Engineering Design Lab, Kyushu University}\enspace---\enspace
+  Prof.\ K.\ Shimoyama\par\vspace{2pt}
+
+}
+\vfill
+{\color{linecolor!60}\rule{\fullW}{0.4pt}}
+
+\end{minipage}
+ 
+
+\end{document}

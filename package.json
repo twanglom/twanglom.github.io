@@ -1,0 +1,13 @@
+{
+  "name": "personal-page",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "dev:backend": "cd backend && python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000",
+    "deploy:cloudrun": "npm run build && gcloud run deploy personal-page --source . --region asia-northeast1 --allow-unauthenticated --memory 512Mi --project personal-page-tw",
+    "deploy:frontend": "npm --prefix frontend run build && firebase deploy --only hosting"
+  }
+}
