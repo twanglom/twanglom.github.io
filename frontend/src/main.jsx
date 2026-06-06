@@ -36,7 +36,7 @@ const fallbackProfile = {
   location: "Fukuoka, Japan",
   email: "thanasak.wang@gmail.com",
   summary:
-    "Mechanical engineer and Physics-AI researcher connecting system dynamics, measured signals, and computational modeling to solve practical engineering problems.",
+    "Mechanical engineer and Physics-AI researcher connecting system dynamics, measured signals, and computational modeling to solve practical engineering problems. Background spans precision automation, vibration diagnostics, physics-based simulation, and uncertainty-aware optimization across manufacturing, acoustics, aerodynamics, and materials design.",
   cvUrl: "/cvfiles/CV-THANASAK-2026.pdf",
   imageUrl: "/profile-1.JPG",
   links: [

@@ -10,9 +10,7 @@ PROFILE = {
         "practical engineering problems. Background spans precision automation, "
         "vibration diagnostics, physics-based simulation, and uncertainty-aware "
         "optimization across manufacturing, acoustics, aerodynamics, and "
-        "materials design. Develops interpretable workflows and software tools "
-        "that turn sensor data and high-fidelity simulations into design insight, "
-        "diagnostic decisions, and validated research outcomes."
+        "materials design."
     ),
     "cvUrl": "/cvfiles/CV-THANASAK-2026.pdf",
     "imageUrl": "/profile-1.JPG",

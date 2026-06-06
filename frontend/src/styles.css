@@ -161,10 +161,11 @@ a {
 
 .lede {
   max-width: 790px;
-  margin: 0;
+  margin: 0 auto;
   color: var(--muted);
   font-size: 19px;
   line-height: 1.75;
+  text-align: center;
 }
 
 .heroMeta {
